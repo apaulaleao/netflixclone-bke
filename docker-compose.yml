@@ -4,14 +4,14 @@ services:
   netflixpg:
     image: postgres:alpine
     ports:
-      - '5432:5432'
+      - '5433:5433'
     container_name: 'netflixpg'
     restart: always
     volumes:
       - netflixpg-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: pgUser
-      POSTGRES_PASSWORD: pg1234
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mc485213
 
 volumes:
   netflixpg-data:
